@@ -1,4 +1,4 @@
-# キーボードカスタマイズユーティリティ🎮 ⌨ の選択ガイド
+# Ubuntuにおけるキーボードカスタマイズユーティリティ🎮 ⌨ の選択ガイド
 
 私は日々の作業においてLogicoolのK835 TKLキーボードを利用しています。
 このキーボードは元々日本語配列でしたが、9009 XDA ヴィンテージ PBTキーキャップセットを利用してキーキャップを交換し、英語配列に切り替えることにしました。
@@ -11,17 +11,8 @@
 
 ![](https://raw.githubusercontent.com/yKesamaru/key_customize/master/assets/eye_catch.png)
 
-## 環境
-```bash
-cat /etc/lsb-release
-DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=20.04
-DISTRIB_CODENAME=focal
-DISTRIB_DESCRIPTION="Ubuntu 20.04.6 LTS"
-```
 
-- [キーボードカスタマイズユーティリティ🎮 ⌨ の選択ガイド](#キーボードカスタマイズユーティリティ--の選択ガイド)
-  - [環境](#環境)
+- [Ubuntuにおけるキーボードカスタマイズユーティリティ🎮 ⌨ の選択ガイド](#ubuntuにおけるキーボードカスタマイズユーティリティ--の選択ガイド)
   - [確認ポイント](#確認ポイント)
   - [確認ポイントの具体的な説明](#確認ポイントの具体的な説明)
     - [1. 使用する環境を確認する:](#1-使用する環境を確認する)
@@ -57,7 +48,7 @@ DISTRIB_DESCRIPTION="Ubuntu 20.04.6 LTS"
 
 4. **GUIエディタの利用**:
     - GUIエディタで編集可能: AutoKey, Key Mapper, GNOME Tweaks, xkeycaps, **input-remapper**
-    - GUIエディタで編集不可能: xmodmap, xkb, Interception Tools
+    - GUIエディタで編集不可能: xmodmap, xkb, Interception Tools（一部GUIエディタあり）
 
 5. **学習曲線**:
     - 容易: xmodmap, AutoKey, Key Mapper, GNOME Tweaks, xkeycaps, **input-remapper**
@@ -81,6 +72,8 @@ https://wiki.archlinux.jp/index.php/%E5%85%A5%E5%8A%9B%E3%83%AA%E3%83%9E%E3%83%8
 
 たとえば、xmodmapやxkeycapsはX11専用です。しかし、Interception Toolsや**input-remapper**はX11とWaylandの両方で利用できます。また、GNOME TweaksもX11とWaylandの両方で動作可能な可能性がありますが、Wayland環境ではキーボードリマッピング機能に制限があるかもしれません。
 
+今から導入する場合、特別な理由がなければwaylandに対応しているユーティリティを選択することをおすすめします。
+
 ### 2. 再現の容易さを考慮する:
 システムを再インストールする際や、設定を他のコンピューターに移行する際、再現の容易さが重要です。
 
@@ -94,14 +87,14 @@ https://wiki.archlinux.jp/index.php/%E5%85%A5%E5%8A%9B%E3%83%AA%E3%83%9E%E3%83%8
 ### 4. GUIエディタの利用:
 GUIエディタはキーボードカスタマイズのプロセスを簡単かつ視覚的に行えますが、GUIエディタで編集可能なユーティリティとGUIエディタで編集不可能なユーティリティがあります。
 
-GUIエディタで編集可能なユーティリティにはAutoKey, Key Mapper, GNOME Tweaks, xkeycaps, および **input-remapper**があり、直感的にキーボード設定を変更できます。一方、GUIエディタで編集不可能なユーティリティにはxmodmap, xkb, および Interception Toolsがあり、これらはコマンドラインやテキストエディタを使って設定を行います。
+GUIエディタで編集可能なユーティリティにはAutoKey, Key Mapper, GNOME Tweaks, xkeycaps, および **input-remapper**があり、直感的にキーボード設定を変更できます。一方、GUIエディタで編集不可能なユーティリティにはxmodmap, xkb, および Interception Toolsがあり、これらはコマンドラインやテキストエディタを使って設定を行います。（一部GUIエディタあり）
 
 ### 5. 学習曲線:
 キーボードカスタマイズユーティリティは、学習曲線が異なります。
 
 容易に学べるユーティリティにはxmodmap, AutoKey, Key Mapper, GNOME Tweaks, xkeycaps, および **input-remapper**があります。一方で、xkbやInterception Toolsは学習曲線が急であり、高度な機能を利用するためにはより多くの学習が必要です。
 
-利用目的と取れる時間に応じて、ユーティリティを選択することが重要です。
+カスタマイズに時間と労力をとられるのであれば本末転倒です。利用目的と取れる時間に応じて、ユーティリティを選択してください。
 
 ## 注意点
 - GNOME Tweaksの`キーボードとマウス　→　キーボード　→　追加のレイアウト`を一度確認しておくとよい。ここで設定できるならこれが一番簡単。
@@ -128,13 +121,11 @@ https://wiki.archlinux.jp/index.php/%E5%85%A5%E5%8A%9B%E3%83%AA%E3%83%9E%E3%83%8
 
 https://github.com/sezanzeb/input-remapper
 
-https://qiita.com/j0306043/items/fcc9546056eeca5b025a#%E3%82%AD%E3%83%BC%E3%83%90%E3%82%A4%E3%83%B3%E3%83%89%E3%81%AE%E5%A4%89%E6%9B%B4-wayland%E7%B7%A8
-
-`**input-remapper**`は、キーボードやマウスのボタンを再マッピングするためのツールで、X11およびWaylandの両方をサポートしています。
+`input-remapper`は、キーボードやマウスのボタンを再マッピングするためのツールで、X11およびWaylandの両方をサポートしています。
 
 このツールは、あらゆる入力を他の任意の入力にマッピングでき、プログラム可能なマクロ、ジョイスティック、ホイール、トリガー、キー、マウスの動きなどをサポートしています。
 
-Ubuntu 22.04の場合、`**input-remapper**`はUbuntuの公式リポジトリにも含まれており、パッケージ名は`**input-remapper**`となっています。ver. 1.4.0-1がインストールされます。
+Ubuntu 22.04の場合、`input-remapper`はUbuntuの公式リポジトリにも含まれており、パッケージ名は`input-remapper`となっています。ver. 1.4.0-1がインストールされます。
 
 https://packages.ubuntu.com/jammy/input-remapper
 
@@ -164,13 +155,15 @@ debファイルをダウンロードした後、input-remapper-1.5.1.debをダ�
 ![](https://raw.githubusercontent.com/sezanzeb/input-remapper/a012746a6b3d842943613fe80461bf50be3bc01d/readme/architecture.png)
 
 ### 使い方
+
 https://github.com/sezanzeb/input-remapper/blob/HEAD/readme/usage.md
 
 ### 例
+
 https://github.com/sezanzeb/input-remapper/blob/a012746a6b3d842943613fe80461bf50be3bc01d/readme/examples.md
 
 ### 設定ファイルの保存場所
-`$HOME/.config/**input-remapper**/`以下に設定ファイルが保存されます。
+`$HOME/.config/input-remapper/`以下に設定ファイルが保存されます。
 再インストールの際、このディレクトリ以下をバックアップしておくとよいでしょう。
 
 #### 設定ファイルの内容
@@ -206,10 +199,10 @@ config.json
 
 キーボードのカスタマイズは作業効率を向上させる重要なステップであり、本記事では複数のキーボードカスタマイズユーティリティを検討し、**input-remapper**の利用方法を深く探りました。
 
-選択肢は多岐にわたるため、個人のニーズや使用環境に応じて最適なツールを選ぶことが重要です。
+選択肢は多岐にわたるため、個人のニーズや使用環境に応じて最適なツールを選んでください。
 
 **input-remapper**は、特にUbuntuユーザーにとって、キーボードの再マッピングとマクロ作成の両方に強力なツールであり、簡単に取り入れることができます。
 
-この記事で、キーボードのカスタマイズがどれほど容易かつ効果的であるかを共有し、読者の皆さんにも自身の作業環境を最適化する手助けを提供できればと思います。
+この記事で、読者の皆さんにも自身の作業環境を最適化する手助けを提供できればと思います。
 
 以上です。ありがとうございました。
