@@ -9,7 +9,7 @@
 
 この記事では、多くのキーボードカスタマイズユーティリティの特徴と適用範囲を整理し、採用した**input-remapper**について詳しく解説します。
 
-![](assets/eye_catch.png)
+![](https://raw.githubusercontent.com/yKesamaru/key_customize/master/assets/eye_catch.png)
 
 ## 環境
 ```bash
@@ -112,7 +112,7 @@ GUIエディタで編集可能なユーティリティにはAutoKey, Key Mapper,
   ```
   を実行しておくと、後々、gsettingsで設定を再現する際に便利です。
 
-  ![](assets/2023-10-19-18-24-15.png)
+  ![](https://raw.githubusercontent.com/yKesamaru/key_customize/master/assets/2023-10-19-18-24-15.png)
 
 - xmodmapはfcitxと相性が悪く、`.xmodmap`の設定はfcitxの切替時に無効化されてしまいます。
 
@@ -126,7 +126,7 @@ https://wiki.archlinux.jp/index.php/%E5%85%A5%E5%8A%9B%E3%83%AA%E3%83%9E%E3%83%8
 
 ## **input-remapper**について
 
-https://github.com/sezanzeb/**input-remapper**
+https://github.com/sezanzeb/input-remapper
 
 https://qiita.com/j0306043/items/fcc9546056eeca5b025a#%E3%82%AD%E3%83%BC%E3%83%90%E3%82%A4%E3%83%B3%E3%83%89%E3%81%AE%E5%A4%89%E6%9B%B4-wayland%E7%B7%A8
 
@@ -136,38 +136,38 @@ https://qiita.com/j0306043/items/fcc9546056eeca5b025a#%E3%82%AD%E3%83%BC%E3%83%9
 
 Ubuntu 22.04の場合、`**input-remapper**`はUbuntuの公式リポジトリにも含まれており、パッケージ名は`**input-remapper**`となっています。ver. 1.4.0-1がインストールされます。
 
-https://packages.ubuntu.com/jammy/**input-remapper**
+https://packages.ubuntu.com/jammy/input-remapper
 
 ```bash
-sudo apt -y install **input-remapper**
+sudo apt -y install input-remapper
 ```
 
 最新の2.0以降をインストールしたい場合は、GitHubからインストールする必要があります。
 
-https://github.com/sezanzeb/**input-remapper**/releases
+https://github.com/sezanzeb/input-remapper/releases
 
 Ubuntu 20.04の場合は、ver. 1.5.1が最終バージョンです。
 
-https://github.com/sezanzeb/**input-remapper**/releases/tag/1.5.1
+https://github.com/sezanzeb/input-remapper/releases/tag/1.5.1
 
-debファイルをダウンロードした後、**input-remapper**-1.5.1.debをダブルクリックすると、Ubuntuソフトウェアでインストールできます。
+debファイルをダウンロードした後、input-remapper-1.5.1.debをダブルクリックすると、Ubuntuソフトウェアでインストールできます。
 
-![](assets/2023-10-20-10-00-55.png)
+![](https://raw.githubusercontent.com/yKesamaru/key_customize/master/assets/2023-10-20-10-00-55.png)
 
-![](assets/2023-10-20-10-02-15.png)
+![](https://raw.githubusercontent.com/yKesamaru/key_customize/master/assets/2023-10-20-10-02-15.png)
 
 起動には管理者権限が必要です。
 
-![](assets/2023-10-20-10-05-16.png)
+![](https://raw.githubusercontent.com/yKesamaru/key_customize/master/assets/2023-10-20-10-05-16.png)
 
 ### アーキテクチャ
-![](https://raw.githubusercontent.com/sezanzeb/**input-remapper**/a012746a6b3d842943613fe80461bf50be3bc01d/readme/architecture.png)
+![](https://raw.githubusercontent.com/sezanzeb/input-remapper/a012746a6b3d842943613fe80461bf50be3bc01d/readme/architecture.png)
 
 ### 使い方
-https://github.com/sezanzeb/**input-remapper**/blob/HEAD/readme/usage.md
+https://github.com/sezanzeb/input-remapper/blob/HEAD/readme/usage.md
 
 ### 例
-https://github.com/sezanzeb/**input-remapper**/blob/a012746a6b3d842943613fe80461bf50be3bc01d/readme/examples.md
+https://github.com/sezanzeb/input-remapper/blob/a012746a6b3d842943613fe80461bf50be3bc01d/readme/examples.md
 
 ### 設定ファイルの保存場所
 `$HOME/.config/**input-remapper**/`以下に設定ファイルが保存されます。
